@@ -1,0 +1,35 @@
+/ # pppd /dev/ttyS2 115200 nodetach nocrtscts debug connect 'chat -v "" "AT" "OK
+" "AT+CGDCONT=1,\"IP\",\"CMIOT\"" "OK" "ATD*99#" "CONNECT"'
+Script chat -v "" "AT" "OK" "AT+CGDCONT=1,\"IP\",\"CMIOT\"" "OK" "ATD*99#" "CONNECT" finished (pid 303), status = 0x0
+Serial connection established.
+using channel 2
+Using interface ppp0
+Connect: ppp0 <--> /dev/ttyS2
+sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x9adbfb32> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x3 <asyncmap 0x0> <auth pap> <magic 0xe2b18126> <pcomp> <accomp>]
+No auth is possible
+sent [LCP ConfRej id=0x3 <auth pap>]
+rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x9adbfb32> <pcomp> <accomp>]
+rcvd [LCP ConfReq id=0x4 <asyncmap 0x0> <magic 0xe2b18126> <pcomp> <accomp>]
+sent [LCP ConfAck id=0x4 <asyncmap 0x0> <magic 0xe2b18126> <pcomp> <accomp>]
+sent [IPCP ConfReq id=0x1 <compress VJ 0f 01> <addr 0.0.0.0>]
+rcvd [LCP DiscReq id=0x5 magic=0xe2b18126]
+rcvd [IPCP ConfReq id=0x2]
+sent [IPCP ConfNak id=0x2 <addr 0.0.0.0>]
+rcvd [IPCP ConfRej id=0x1 <compress VJ 0f 01>]
+sent [IPCP ConfReq id=0x2 <addr 0.0.0.0>]
+rcvd [IPCP ConfReq id=0x3]
+sent [IPCP ConfAck id=0x3]
+rcvd [IPCP ConfNak id=0x2 <addr 10.144.178.147>]
+sent [IPCP ConfReq id=0x3 <addr 10.144.178.147>]
+rcvd [IPCP ConfAck id=0x3 <addr 10.144.178.147>]
+Could not determine remote IP address: defaulting to 10.64.64.64
+local  IP address 10.144.178.147
+remote IP address 10.64.64.64
+^CTerminating on signal 2
+Connect time 1.8 minutes.
+Sent 1140 bytes, received 1059 bytes.
+sent [LCP TermReq id=0x2 "User request"]
+rcvd [LCP TermAck id=0x2]
+Connection terminated.
+
